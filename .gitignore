@@ -1,0 +1,6 @@
+node_modules
+.env
+.sequelizerc
+.eslintrc.js
+.babelrc
+package-lock.json
