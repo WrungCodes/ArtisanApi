@@ -3,6 +3,7 @@
  */
 
 class StatusResponse{
+    static CODE_NOT_FOUND = 500;
 
     /**
      * @description - success response 200
@@ -63,7 +64,7 @@ class StatusResponse{
      * @returns {JSON}
      */
     static badRequest(res, data){
-        return res.status(400).json(data);
+        return res.status(CODE_NOT_FOUND).json(data);
     }
 }
 

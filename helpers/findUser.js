@@ -17,4 +17,13 @@ const findUser = async (key, value) => {
     }
 }
 
+const findProfile = async (key, value) => {
+    const userProfile = await profile.findOne({
+        where: {
+            key: value.id
+        },
+        attributes: { exclude: ['userId', 'createdAt', 'updatedAt','id'] },
+    });
+}
+
 export default findUser;

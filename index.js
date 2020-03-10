@@ -12,8 +12,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended:false}));
 
 //Routes
-
-
  app.use('/user', auth);
  app.use('/user/profile', profile);
 

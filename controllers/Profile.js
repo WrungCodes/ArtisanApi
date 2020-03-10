@@ -86,7 +86,7 @@ class Profile {
                     phone: phone ? phone : userProfile.phone,
                     location: location ? location : userProfile.location,
                 });
-
+                // const create = await userProfile.create({})
                 StatusResponse.success(res, {
                     status: 200,
                     data: {

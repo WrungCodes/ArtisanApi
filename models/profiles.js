@@ -1,6 +1,6 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  const Profile = sequelize.define('profile', {
+  const Profile = sequelize.define('profiles', {
     firstName: DataTypes.STRING,
     lastName: DataTypes.STRING,
     email: DataTypes.STRING,
@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   Profile.associate = function(models) {
     // associations can be defined here
-    Profile.belongsTo(models.user, {
+    Profile.belongsTo(models.users, {
       foreignKey: 'userId',
       onDelete: 'CASCADE',
       as: 'user'

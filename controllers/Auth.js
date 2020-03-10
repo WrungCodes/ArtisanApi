@@ -43,7 +43,7 @@ class Auth
             });
             
             let link = `${process.env.API_URL}/user/verify?id=${randToken}`;
-            let subject = 'Patricia Email Verification';
+            let subject = 'Artisan Email Verification';
             let message = `Hello ${username}, please verify your account`;
             let html = `<a href=${link}> Click Here </a>`;
 
@@ -62,7 +62,7 @@ class Auth
 
         } catch (error) {
             StatusResponse.internalServerError(res, {
-                status: 500,
+                status: StatusResponse.CODE_NOT_FOUND,
                 data: {
                     error: [`internal server error: ${error}`]
                 }
